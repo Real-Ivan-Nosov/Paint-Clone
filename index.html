@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paint Clone</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,49 +11,55 @@
     <div class="top-bar">
         <!-- Active Tool -->
         <div class="active-tool">
-            <span id="active-tool" title="Active Tool">Brush</span>
+            <span id="active-tool" title="Активный инструмент">Кисть</span>
         </div>
         <!-- Brush -->
         <div class="brush tool">
-            <i class="fas fa-brush" id="brush" title="Brush"></i>
-            <input type="color">
-            <span class="size" id="brush-size" title="Brush Size">10</span>
+            <i class="fas fa-brush" id="brush" title="Кисть"></i>
+            <input value="a51dab" class="jscolor" id="brush-color">
+            <span class="size" id="brush-size" title="Размер кисти">10</span>
             <input type="range" min="1" max="50" value="10" class="slider" id="brush-slider">
         </div>
         <!-- Bucket -->
         <div class="bucket tool">
-            <i class="fas fa-fill-drip" title="Background Color"></i>
-            <input type="color">
+            <i class="fas fa-fill-drip" title="Цвет фона"></i>
+            <input value="ffffff" class="jscolor" id="bucket-color">
         </div>
         <!-- Eraser -->
         <div class="tool">
-            <i class="fas fa-eraser" id="eraser" title="Eraser"></i>
+            <i class="fas fa-eraser" id="eraser" title="Ластик"></i>
         </div>
         <!-- Clear Canvas -->
         <div class="tool">
-            <i class="fas fa-undo-alt" id="clear-canvas" title="Clear"></i>
+            <i class="fas fa-undo-alt" id="clear-canvas" title="Очистить"></i>
         </div>
         <!-- Save Local Storage -->
         <div class="tool">
-            <i class="fas fa-download" id="save-storage" title="Save Local Storage"></i>
+            <i class="fas fa-download" id="save-storage" title="Сохранить в локльное хранилище"></i>
         </div>
         <!-- Load Local Storage -->
         <div class="tool">
-            <i class="fas fa-upload" id="load-storage" title="Load Local Storage"></i>
+            <i class="fas fa-upload" id="load-storage" title="Загрузить из локального хранилища"></i>
         </div>
         <!-- Clear Local Storage -->
         <div class="tool">
-            <i class="fas fa-trash-alt" id="clear-storage" title="Clear Local Storage"></i>
+            <i class="fas fa-trash-alt" id="clear-storage" title="Очистить локальное хранилище"></i>
         </div>
         <!-- Download Image -->
         <div class="tool">
             <a id="download">
-                <i class="far fa-save" title="Save Image File"></i>
+                <i class="far fa-save" title="Сохранить изображение"></i>
             </a>
         </div>
     </div>
 
+    <!-- Mobile Message -->
+    <div class="mobile-message">
+        <h2>Пожалуйста, используйте девайс с большим разрешением дисплея</h2>
+    </div>
+
     <!-- Script -->
+    <script src="jscolor.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
